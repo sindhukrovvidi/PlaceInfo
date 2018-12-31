@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Companies</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+<body>
+        <style>
+            body {font-family: "Lato", sans-serif}
+        </style>    
+
+<center>
+  <br><br>
+  <div class="container">
+    <h2>Apply Filters</h2>
+    <br>
+    <form class="w3-container w3-card-4" style ="width:75% " action="apply.jsp" method="post">
+        <div class="row">
+            <div class="column w3-text">
+                    <h3>Job Profile</h3>
+                    <br>
+                    <input class="w3-check" type="checkbox" name="jobp" value="Software Developer">
+                    <label> Software Developer </label>
+                    <br>
+                    <input class="w3-check" type="checkbox" name="jobp" value="Tester">
+                    <label> Tester </label>
+                    <br>
+                    <input class="w3-check" type="checkbox" name="jobp" value="Data Analyst">
+                    <label>Data Analyst </label>
+                    <br>
+                    <input class="w3-check" type="checkbox" name="jobp" value="Network Engineer">
+                    <label> Network Engineer </label>
+                    <br>
+
+            </div>
+            <div class="column w3-text">
+                <h3>CTC</h3>
+                <br>
+                <label for="ctc-min">MIN</label>
+                <input type="text" id="t1" value="">
+                <input type="range" name="ctc-min" min="300000" max="2500000" value="300000" class="slider" onchange="update1(this.value);">
+
+                <input type="range" name="ctc-max" min="300000" max="2500000" value="2500000"class="slider" onchange="update2(this.value);">
+                <input type="text" id="t2" value="">
+                <label for="ctc-max">MAX</label>
+                <br>
+            </div>
+            <div class="column w3-text">
+                <h3>Status</h3>
+                <br>
+                <input class="w3-radio" type="radio" name="status" value="yettocome" required="required" >
+                <label> Yet to come</label>
+                <br>
+                <input class="w3-radio" type="radio" name="status" value="active" required="required" >
+                <label> Active</label>
+                <br>
+                <input class="w3-radio" type="radio" name="status" value="done" required="required">
+                <label> Done</label>
+                <br>
+      
+            </div>
+            
+        </div>
+        <br><br>
+        <button onclick="capture()" class="w3-btn w3-blue">Apply</button>
+        <br><br>
+    </form>
+  </div>
+    <div class="modal-footer" >
+        <br><br>
+        <a href="companies.jsp">Close</a>
+    </div>
+
+</center>
+<script>
+function update1(val1) {
+    document.getElementById('t1').value = val1;
+}
+function update2(val2) {
+    document.getElementById('t2').value = val2;
+}
+</script>
+</body>
+
+<style>
+
+div {
+    border-radius: 5px;
+    padding: 5px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #2196F3;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #2196F3;
+    cursor: pointer;
+}
+
+
+</style>
+
+</html>
